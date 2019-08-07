@@ -11,6 +11,14 @@ import Home from './Home'
 import Procedures from './Procedures';
 import Contact from './Contact';
 
+const proceduresArray = [
+  'General Checkups',
+  'Teeth Cleaning',
+  'Cavity Screenings',
+  'Cavity Fillings',
+  'Chipped Tooth Fixings',
+  'Tooth Removal',
+  'Root Canals']
 
 export default function App() {
   return (
@@ -23,7 +31,7 @@ export default function App() {
 
       <div>
         <Route exact path="/" component={Home} />
-        <Route path="/procedures" component={Procedures} />
+        <Route path='/procedures' component={() => <Procedures procedures={proceduresArray} />} />
         <Route path="/contact" component={Contact} />
       </div>
     </Router>
